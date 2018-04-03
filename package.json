@@ -1,5 +1,8 @@
 {
-  "name": "githubissues",
+  "name": "github-open-angular-issues",
+  "version": "1.0.0",
+  "description": "Angular js open issues page utilizing Github's APIs",
+  "keywords": "Angular js, open issues, github",
   "private": true,
   "devDependencies": {
     "gulp": "^3.9.0",
