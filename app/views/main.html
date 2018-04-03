@@ -1,0 +1,23 @@
+<article ng-if="main.repoName">
+  <header class="page-header">
+    <h3>{{main.repoName}} open issues page</h3>
+  </header>
+  <section class="issues-section" ng-if="main.issuesList">
+    <ul>
+      <li ng-repeat="issue in main.issuesList">
+        <a ng-class="{'valid-link': issue.comments}" ng-click="main.goToIssueDetails(issue)">{{issue.title}}</a>
+        <p>
+          <span>Issue #: {{issue.number}}</span>
+          <span>Last updated on: {{issue.updated_at | date}}</span>
+          <a class="comments-link" ng-class="{'valid-link': issue.comments}" ng-click="main.goToIssueDetails(issue)">{{issue.comments}} Comments</a>
+        </p>
+      </li>
+    </ul>
+  </section>
+  <div class="buttos-holder" ng-if="main.issuesList">
+    <button ng-click="main.goToFirstPage()" ng-disabled="!main.links.first">&#60;&#60;</button>
+    <button ng-click="main.goToPrevPage()" ng-disabled="!main.links.prev">Prev.</button>
+    <button ng-click="main.goToNextPage()" ng-disabled="!main.links.next">Next</button>
+    <button ng-click="main.goToLastPage()" ng-disabled="!main.links.last">&#62;&#62;</button>
+  </div>
+</article>

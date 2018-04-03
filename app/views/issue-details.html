@@ -1,0 +1,13 @@
+<article class="issue-details">
+  <header>
+    <h3>{{issueDetails.title}}</h3>
+  </header>
+  <section class="comments-section" ng-if="issueDetails.comments">
+    <p>{{issueDetails.comments.length}} comments</p>
+    <ul>
+      <li ng-repeat="comments in issueDetails.comments">
+        {{comments.body}}
+      </li>
+    </ul>
+  </section>
+</article>

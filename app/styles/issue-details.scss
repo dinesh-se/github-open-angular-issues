@@ -1,0 +1,14 @@
+//styles of issue details page
+.issue-details {
+  word-break: break-word;
+
+  .comments-section {
+    margin-top: 40px;
+    font-size: 0.9em;
+
+    li {
+      list-style: none;
+      padding-top: 20px;
+    }
+  }
+}
